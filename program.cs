@@ -6,19 +6,31 @@ using System;
               {
                   static void Main()
                     {
-                        //Prompt the user for minutes exercises
-                          Console.Write("Enter How Many you Exercised");
+                      int runningTotal = 0;
+                      bool keepGoing = true;
 
-                          string entry = System.Console.ReadLine();
+                            while(keepGoing)
+                            {
+                                      //Prompt the user for minutes exercises
+                                        Console.Write("Enter How Many you Exercised");
 
-                          string firstName = "Michael";    }//end static void Main()
+                                        string entry = System.Console.ReadLine();
 
+                                        int minutes = int.Parse(entry);//Here you transform a string into an int value
+                                        runningTotal = runningTotal + minutes; //Add minutes exercised to total
+
+                                        //Display total minutes exercised to the screen
+                                     Console.WriteLine("You've entered " +runningTotal + " minutes");
+
+                                    //repeat until the user quits
+                                  }//End the while loop
+
+
+                                  
                         }//End the class
 
-  }//End the namespace/Class
 
 
- //Add minutes exercised to total
 
- //Display total minutes to the screen
- //Repeat until the user quiits
+
+}//End the namespace
